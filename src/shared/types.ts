@@ -2,7 +2,7 @@ export enum SelectedPage {
     Home = "home",
     NewArrivals = "newarrivals",
     Favorite = "favorite",
-    Contact = "Contact",
+    Contact = "contact",
   }
 
   export interface NewArrivalType {
