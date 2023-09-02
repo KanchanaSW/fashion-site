@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 import { SelectedPage } from "@/shared/types"
 
 import NewArrivals from "@/scenes/new-arrivals"
-import OurClasses from "@/scenes/ourClasses"
+import Favorite from "@/scenes/favorite"
 import ContactUs from "@/scenes/contactUs"
 import Footer from "@/scenes/footer"
 import Home from "@/scenes/home"
@@ -29,9 +29,9 @@ function App() {
     <div className="app bg-white">
       <Navbar isTopOfPage={isTopOfPage} selectedPage={selectedPage} setSelectedPage={setSelectedPage}/>
       <Home setSelectedPage={setSelectedPage} />
-
       <NewArrivals setSelectedPage={setSelectedPage} />
-      <OurClasses setSelectedPage={setSelectedPage} />
+      <Favorite setSelectedPage={setSelectedPage} />
+
       <ContactUs setSelectedPage={setSelectedPage} />
       <Footer />
     </div>
