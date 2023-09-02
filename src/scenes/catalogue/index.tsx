@@ -1,9 +1,12 @@
 import { SelectedPage } from '@/shared/types'
 import ActionButton from '@/shared/ActionButton'
 import HomePageGraphic from '@/assets/catalogue1.png'
-import SponsorRedBull from '@/assets/SponsorRedBull.png'
-import SponsorForbes from '@/assets/SponsorForbes.png'
-import SponsorFortune from '@/assets/SponsorFortune.png'
+import Sponsor1 from '@/assets/Rectangle 36.png'
+import Sponsor2 from '@/assets/Rectangle 38.png'
+import Sponsor3 from '@/assets/Rectangle 41.png'
+import Sponsor4 from '@/assets/Rectangle 43.png'
+import Sponsor5 from '@/assets/Rectangle 44.png'
+import Sponsor6 from '@/assets/Rectangle 45.png'
 import useMediaQuery from '@/hooks/useMediaQuery'
 import { motion } from 'framer-motion'
 
@@ -21,6 +24,7 @@ const Catalogue = ({setSelectedPage}: Props) => {
     >
         {/* image and main header */}
         <motion.div 
+            // style={{backgroundColor: "#F4F6F5", margin: '10%'}}
             className='md:flex mx-auto w-5/6 items-center justify-center md:h-5/6'
             onViewportEnter={() => setSelectedPage(SelectedPage.Catalogue)}    
         >
@@ -39,7 +43,7 @@ const Catalogue = ({setSelectedPage}: Props) => {
                     }}
                 >
                     <div className='relative'>
-                        <div className='before:absolute before:-top-20 before:-left-20 before:z-[-1] '>
+                        <div className='before:absolute before:-top-20 before:-left-20 before:z-[-1]'>
                             {/* <img src={HomePageText} alt="home-page-text" /> */}
                             <div className='text-7xl font-bold'>LET'S <br/>
                                 EXPLORE <br />
@@ -78,12 +82,15 @@ const Catalogue = ({setSelectedPage}: Props) => {
 
         {/* sponsers */}
         {isAboveMediumScreens && (
-            <div className='h-[150px] w-full bg-primary-100 py-10'>
+            <div className='h-[150px] w-full bg-[#EBD96B] py-10'>
                 <div className='mx-auto w-5/6'>
-                    <div className='flex w-3/5 items-center justify-between gap-8'>
-                        <img src={SponsorRedBull} alt="redbull-sponser" />
-                        <img src={SponsorForbes} alt="forbes-sponser" />
-                        <img src={SponsorFortune} alt="forture-sponser" />
+                    <div className='flex w-auto items-center justify-evenly gap-8'>
+                        <img src={Sponsor1} alt="sponser-1" />
+                        <img src={Sponsor2} alt="sponser-2" />
+                        <img src={Sponsor3} alt="sponser-3" />
+                        <img src={Sponsor4} alt="sponser-4" />
+                        <img src={Sponsor5} alt="sponser-5" />
+                        <img src={Sponsor6} alt="sponser-6" />
                     </div>
                 </div>
             </div>
