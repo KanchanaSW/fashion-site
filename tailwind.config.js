@@ -25,7 +25,7 @@ module.exports = {
       },
       content: {
         rectangle: "url('./assets/Rectangle 2.png')",
-        abstractwaves: "url('./assets/AbstractWaves.png')",
+        newArrivals: "url('./assets/Vector 8.png')",
         sparkles: "url('./assets/Sparkles.png')",
         circles: "url('./assets/Circles.png')",
       },

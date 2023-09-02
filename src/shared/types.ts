@@ -1,12 +1,12 @@
 export enum SelectedPage {
-    Catalogue = "catalogue",
-    Fashion = "fashion",
+    Home = "home",
+    NewArrivals = "newarrivals",
     Favorite = "favorite",
-    Lifestyle = "lifestyle",
+    Contact = "Contact",
   }
 
-  export interface BenefitType {
-    icon:JSX.Element;
+  export interface NewArrivalType {
+    icon:string;
     title:string;
     description:string;
   }

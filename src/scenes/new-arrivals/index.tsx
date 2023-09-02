@@ -1,26 +1,29 @@
 import HText from '@/shared/HText';
-import { BenefitType, SelectedPage } from '@/shared/types';
+import { NewArrivalType, SelectedPage } from '@/shared/types';
 import { HomeModernIcon,UserGroupIcon,AcademicCapIcon } from '@heroicons/react/24/solid';
 import {motion} from "framer-motion"
-import Benefit from './Benefit';
+import NewArrival from './NewArrival';
 import ActionButton from '@/shared/ActionButton';
 import BenefitsPageGraphic from "@/assets/BenefitsPageGraphic.png"
+import Image1 from '@/assets/NW-Image1.png'
+import Image2 from '@/assets/NW-Image2.png'
+import Image3 from '@/assets/NW-Image3.png'
 
-const benefits: Array<BenefitType> = [
+const arrivals: Array<NewArrivalType> = [
     {
-        icon: <HomeModernIcon className='h-6 w-6' />,
-        title: "Stat of art facilities",
-        description: "lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet"
+        icon: Image1,
+        title: "Hoodies & Sweetshirt",
+        description: "Explore Now!"
     },
     {
-        icon: <UserGroupIcon className='h-6 w-6' />,
-        title: "Stat of art facilities2",
-        description: "lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet"
+        icon: Image2,
+        title: "Coats & Parkas",
+        description: "Explore Now!"
     },
     {
-        icon: <AcademicCapIcon className='h-6 w-6' />,
-        title: "Stat of art facilities3",
-        description: "lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet"
+        icon: Image3,
+        title: "Tees & T-Shirt",
+        description: "Explore Now!"
     },
 ]
 
@@ -35,48 +38,49 @@ type Props = {
     setSelectedPage: (value:SelectedPage) => void;
 }
 
-const Benefits = ({setSelectedPage}: Props) => {
+const NewArrivals = ({setSelectedPage}: Props) => {
   return (
-    <section id="benefits" className='mx-auto min-h-full w-5/6 py-20'>
+    <section id="newarrivals" className='mx-auto min-h-full w-5/6 py-20'>
         <motion.div
-            onViewportEnter={() => setSelectedPage(SelectedPage.Benefits)}
+            onViewportEnter={() => setSelectedPage(SelectedPage.NewArrivals)}
         >
             {/* header */}
-        <motion.div 
-            className='md:my-5 md:my-3/5'
-            initial="hidden"
-            whileInView="visible"
-            viewport={{once:true, amount:0.5}}
-            transition={{duration:0.5}}
-            variants={{
-                hidden:{opacity:0,x:-50},
-                visible:{opacity:1,x:0}
-            }}
-        >
-            <HText>MORE THAN JUST GYM</HText>
-            <p className='my-5 text-sm'>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam, culpa id fugiat minus cupiditate nobis laudantium, cum, ipsa deserunt maxime iusto! A eius ut impedit animi facilis quod vitae at.
-            </p>
-        </motion.div>
+            <div className='relative'>
+                <div className='before:absolute before:left-24 before:top-2 before:z-[-1] before:content-newArrivals'>
+                <motion.div
+                    className='md:my-5 md:my-3/5'
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{once:true, amount:0.5}}
+                    transition={{duration:0.5}}
+                    variants={{
+                        hidden:{opacity:0,x:50},
+                        visible:{opacity:1,x:0}
+                    }}
+                >
+                    <HText>NEW ARRIVALS</HText>
+                </motion.div>
+                </div>
 
-            {/* benefits */}
-        <motion.div 
-            className='md:flex items-center justify-between gap-8 mt-5'
-            initial="hidden"
-            whileInView={"visible"}
-            viewport={{once:true,amount:0.5}}
-            variants={container}
-        >
-            {benefits.map((benefit:BenefitType) => (
-                <Benefit 
-                    key={benefit.title}
-                    icon={benefit.icon}
-                    title={benefit.title}
-                    description={benefit.description}
-                    setSelectedPage={setSelectedPage}
-                />
-            ))}
-        </motion.div>
+            </div>
+
+            {/* new arrivals */}
+            <motion.div 
+                className='md:flex items-center justify-between gap-8 mt-5'
+                initial="hidden"
+                whileInView={"visible"}
+                viewport={{once:true,amount:0.5}}
+                variants={container}
+            >
+                {arrivals.map((arrival:NewArrivalType) => (
+                    <NewArrival 
+                        key={arrival.title}
+                        icon={arrival.icon}
+                        title={arrival.title}
+                        description={arrival.description}
+                    />
+                ))}
+            </motion.div>
 
         {/* grapihs and description */}
         <div className='mt-16 items-center justify-between gap-20 md:mt-28 md:flex'>
@@ -138,4 +142,4 @@ const Benefits = ({setSelectedPage}: Props) => {
   )
 }
 
-export default Benefits
+export default NewArrivals

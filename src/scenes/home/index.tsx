@@ -14,19 +14,19 @@ type Props = {
     setSelectedPage: (value:SelectedPage) => void;
 }
 
-const Catalogue = ({setSelectedPage}: Props) => {
+const Home = ({setSelectedPage}: Props) => {
     const isAboveMediumScreens =useMediaQuery("(min-width:1060px")
 
   return (
     <section 
-        id='catalogue'
+        id='home'
         className='gap-16 bg-white py-10 md:h-full md:pb-0'
     >
         {/* image and main header */}
         <motion.div 
             // style={{backgroundColor: "#F4F6F5", margin: '10%'}}
             className='md:flex mx-auto w-5/6 items-center justify-center md:h-5/6'
-            onViewportEnter={() => setSelectedPage(SelectedPage.Catalogue)}    
+            onViewportEnter={() => setSelectedPage(SelectedPage.Home)}    
         >
             {/* main header */}
             <div className='z-10 mt-32 md:basis-3/5'>
@@ -99,4 +99,4 @@ const Catalogue = ({setSelectedPage}: Props) => {
   )
 }
 
-export default Catalogue
+export default Home
