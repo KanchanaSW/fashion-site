@@ -1,4 +1,4 @@
-# Live Demo [https://gym-site-kw.netlify.app/](https://fashion-site-kw.netlify.app/)
+# Live Demo https://fashion-site-kw.netlify.app/
 
 // npm i framer-motion react-anchor-link-smooth-scroll@1.0.12 @heroicons/react
 // npm i -D @types/react-anchor-link-smooth-scroll@1.0.2 @types/node
