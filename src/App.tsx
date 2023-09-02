@@ -31,7 +31,6 @@ function App() {
       <Home setSelectedPage={setSelectedPage} />
       <NewArrivals setSelectedPage={setSelectedPage} />
       <Favorite setSelectedPage={setSelectedPage} />
-
       <ContactUs setSelectedPage={setSelectedPage} />
       <Footer />
     </div>
